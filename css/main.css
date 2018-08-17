@@ -1,0 +1,122 @@
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: 'Calibri', Helvetica, sans-serif; }
+
+.container {
+  margin: 0 auto;
+  width: 70%; }
+
+/* heading typo */
+.badge-title {
+  font-size: 24px;
+  margin: 0; }
+
+.courses-title {
+  font-size: 18px;
+  margin: 5px 0; }
+
+.badge {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border-bottom: 2px solid #ccc; }
+  .badge .left {
+    order: 1;
+    flex: 1 20%; }
+  .badge .right {
+    order: 2;
+    flex: 2 80%; }
+  .badge .detail {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #c9312c;
+    color: #c9312c;
+    text-decoration: none;
+    margin: 5px 0 0; }
+    .badge .detail:hover {
+      -webkit-transition: 0.3s ease-in all;
+      -moz-transition: 0.3s ease-in all;
+      -ms-transition: 0.3s ease-in all;
+      transition: 0.3s ease-in all;
+      background: #c9312c;
+      color: #fff; }
+
+.flex {
+  display: flex;
+  box-sizing: border-box;
+  padding: 1em; }
+  .flex .wrapper {
+    flex: 1 1 auto; }
+
+.img-fluid {
+  max-width: 100%;
+  display: inline-block; }
+
+.load {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.loader {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 10px; }
+  .loader.passive {
+    display: none; }
+  .loader .load2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s; }
+  .loader .load3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s; }
+  .loader .load4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s; }
+  .loader .load5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s; }
+
+.loader > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+
+.ajaxdata {
+  opacity: 0; }
+  .ajaxdata.active {
+    opacity: 1; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
+
+/*# sourceMappingURL=main.css.map */

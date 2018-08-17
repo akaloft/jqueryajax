@@ -1,0 +1,131 @@
+$ib: inline-block
+
+=transition($transition-time, $method, $element)
+    -webkit-transition: $transition-time $method $element 
+    -moz-transition: $transition-time $method $element
+    -ms-transition: $transition-time $method $element
+    transition: $transition-time $method $element
+
+@mixin flex
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+@mixin flex-flow($values)
+	-webkit-flex-flow: $values
+	-moz-flex-flow: $values
+	-ms-flex-flow: $values
+	flex-flow: $values
+@mixin mar15
+    margin: 0 15px
+
+html,
+body
+    height: 100%
+
+body
+    font-family: 'Calibri', Helvetica, sans-serif
+
+.container
+    margin: 0 auto
+    width: 70%
+
+/* heading typo */
+.badge-title
+    font-size: 24px
+    margin: 0
+.courses-title
+    font-size: 18px
+    margin: 5px 0
+
+.badge
+    @include flex
+    @include flex-flow(row wrap)
+    justify-content: space-around
+    border-bottom: 2px solid #ccc
+    .left
+        order: 1
+        flex: 1 20%
+    .right
+        order: 2
+        flex: 2 80%
+    .detail
+        display: $ib
+        padding: 5px 15px
+        border: 1px solid #c9312c
+        color: #c9312c
+        text-decoration: none
+        margin: 5px 0 0
+        &:hover
+            @include transition(.3s, ease-in, all)
+            background: #c9312c
+            color: #fff
+.flex
+    display: flex
+    box-sizing: border-box
+    padding: 1em
+    .wrapper
+        flex: 1 1 auto
+
+.img-fluid
+    max-width: 100%
+    display: $ib
+
+//Loader
+.load
+    width: 100%
+    height: 100%
+    display: table
+    position: absolute
+    left: 0
+    top: 0
+.loader
+    width: 50px
+    height: 40px
+    text-align: center
+    display: table-cell
+    vertical-align: middle
+    font-size: 10px
+    &.passive
+        display: none
+    .load2
+        -webkit-animation-delay: -1.1s
+        animation-delay: -1.1s
+    .load3
+        -webkit-animation-delay: -1.0s
+        animation-delay: -1.0s
+    .load4
+        -webkit-animation-delay: -0.9s
+        animation-delay: -0.9s
+    .load5
+        -webkit-animation-delay: -0.8s
+        animation-delay: -0.8s
+.loader > div
+    background-color: #333
+    height: 100%
+    width: 6px
+    display: inline-block
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out
+    animation: sk-stretchdelay 1.2s infinite ease-in-out
+
+.ajaxdata
+    opacity: 0
+    &.active
+        opacity: 1
+
+@-webkit-keyframes sk-stretchdelay
+    0%, 40%, 100%
+        -webkit-transform: scaleY(0.4)
+    20%
+        -webkit-transform: scaleY(1)
+
+@keyframes sk-stretchdelay
+    0%, 40%, 100%
+        transform: scaleY(0.4)
+        -webkit-transform: scaleY(0.4)
+    20%
+        transform: scaleY(1)
+        -webkit-transform: scaleY(1)
+
